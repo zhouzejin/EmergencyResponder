@@ -13,6 +13,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -118,6 +119,18 @@ public class EmergencyResponderActivity extends Activity {
 			aa.notifyDataSetChanged();
 			lock.unlock();
 		}
+		
+		// 检查自动响应程序
+		String preferenceName = getString(R.string.user_preferences);
+		SharedPreferences prefs = getSharedPreferences(preferenceName, 0);
+		
+		boolean autoRespond = prefs.getBoolean(AutoResponderActivity.autoResponsePref, false);
+		if (autoRespond) {
+			String respondText = prefs.getString(AutoResponderActivity.responseTextPref, 
+					AutoResponderActivity.defaultResponseText);
+			boolean includeLoc = prefs.getBoolean(AutoResponderActivity.includeLocPref, false);
+			respond(from, respondText, includeLoc);
+		}
 	}
 
 	private void wireUpControls() {
@@ -157,8 +170,8 @@ public class EmergencyResponderActivity extends Activity {
 	}
 
 	protected void startAutoResponder() {
-		// TODO Auto-generated method stub
-		
+		startActivityForResult(new Intent(
+				EmergencyResponderActivity.this, AutoResponderActivity.class), 0);
 	}
 
 	protected void respond(boolean ok, boolean includeLocation) {

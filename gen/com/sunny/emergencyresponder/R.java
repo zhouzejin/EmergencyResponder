@@ -8,6 +8,10 @@
 package com.sunny.emergencyresponder;
 
 public final class R {
+    public static final class array {
+        public static final int respondForDisplayItems=0x7f040000;
+        public static final int respondForValues=0x7f040001;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -18,39 +22,50 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080007;
-        public static final int autoResponder=0x7f080005;
-        public static final int buttonLayout=0x7f080001;
-        public static final int checkboxSendLocation=0x7f080002;
-        public static final int labelRequestList=0x7f080000;
-        public static final int myListView=0x7f080006;
-        public static final int notOkButton=0x7f080004;
-        public static final int okButton=0x7f080003;
+        public static final int action_settings=0x7f09000b;
+        public static final int autoResponder=0x7f090005;
+        public static final int buttonLayout=0x7f090001;
+        public static final int cancelButton=0x7f09000a;
+        public static final int checkboxLocation=0x7f090008;
+        public static final int checkboxSendLocation=0x7f090002;
+        public static final int labelRequestList=0x7f090000;
+        public static final int myListView=0x7f090006;
+        public static final int notOkButton=0x7f090004;
+        public static final int okButton=0x7f090003;
+        public static final int responseText=0x7f090007;
+        public static final int spinnerRespondFor=0x7f090009;
     }
     public static final class layout {
         public static final int activity_emergency_responder=0x7f030000;
+        public static final int autoresponder=0x7f030001;
     }
     public static final class menu {
-        public static final int emergency_responder=0x7f070000;
+        public static final int emergency_responder=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int allClearButtonText=0x7f050002;
-        public static final int allClearText=0x7f050005;
-        public static final int app_name=0x7f050000;
-        public static final int includelocationprompt=0x7f050009;
-        public static final int maydayButtonText=0x7f050003;
-        public static final int maydayText=0x7f050006;
-        public static final int querylistprompt=0x7f050008;
-        public static final int querystring=0x7f050007;
-        public static final int setupautoresponderButtonText=0x7f050004;
+        public static final int action_settings=0x7f060001;
+        public static final int allClearButtonText=0x7f060002;
+        public static final int allClearText=0x7f060005;
+        public static final int app_name=0x7f060000;
+        public static final int autoRespondDurationPrompt=0x7f06000d;
+        public static final int disableButtonText=0x7f06000f;
+        public static final int enableButtonText=0x7f06000e;
+        public static final int includelocationprompt=0x7f060009;
+        public static final int maydayButtonText=0x7f060003;
+        public static final int maydayText=0x7f060006;
+        public static final int querylistprompt=0x7f060008;
+        public static final int querystring=0x7f060007;
+        public static final int respondWithPrompt=0x7f06000b;
+        public static final int setupautoresponderButtonText=0x7f060004;
+        public static final int transmitLocationPrompt=0x7f06000c;
+        public static final int user_preferences=0x7f06000a;
     }
     public static final class style {
         /** 
@@ -74,10 +89,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
